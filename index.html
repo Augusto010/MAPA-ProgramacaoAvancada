@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="pt-br">
+    <head>
+        <title>MapaProgramacaoAvancada</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Style.css" media="screen">
+        <link rel="shortcut icon" href="icon.ico" >
+    </head>
+    <body >
+        <div class="principal">
+            <div class="calculo">
+                <h1>Calculo Km rodado</h1>
+                <img src="src/carro.gif" alt="Carro" height="100px" width="170px">
+            </div>
+            <div>
+                <form method="POST" class="centro" action="CalcularServlet">
+                    <div>
+                    <ul class="formulario">
+                        <li><h3>Modelo de carro: <input type="text" name="ModeloCarro" class="item" required></h3></li>
+                        <li><h3>Valor da gasolina: <input type="text" name="ValorGasolina" class="item" pattern="[0,0-9,9|0.0-9.9]+$" placeholder="(apenas números)" required></h3></li>
+                        <li><h3>Quantos KM/L o carro faz: <input type="text" name="KMl" class="item" pattern="[0,0-9,9|0.0-9.9]+$"  placeholder="(apenas números)" required></h3></li>
+                        <li><h3>Valor médio da revisão a cada 10mil KM: <input type="text" class="item" pattern="[0,0-9,9|0.0=9.9]+$" name="ValorRevisao"  placeholder="(apenas números)" required></h3></li>
+                        <li><h3>Valor de 4 pneus que rodam 50mil KM: <input type="text" class="item" pattern="[0,0-9,9|0.0=9.9]+$" name="ValorPneus"  placeholder="(apenas números)" required></h3></li>
+                    </ul>
+                    </div>
+                    <h3>Estima-se acréscimo de 15% no cálculo do KM rodado por desgaste e desvalorização do veiculo</h3>
+                    <input type="submit" value="Calcular" class="botao">
+                    <a href="index.html"></a>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
